@@ -1,0 +1,27 @@
+{
+  "name": "tarotbot",
+  "version": "1.0.0",
+  "description": "A Twitter bot for Tarot card readings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "node debug.js > temp/debug.txt",
+    "precommit":
+      "pretty-quick --staged --single-quote --trailing-comma all --write "
+  },
+  "author": "Dan Sumption <dan@sumption.org> (http://sumption.org)",
+  "license": "ISC",
+  "dependencies": {
+    "twit": "^2.2.9"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "husky": "^0.14.3",
+    "prettier": "^1.11.1",
+    "pretty-quick": "^1.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dansumption/tarotbot.git"
+  }
+}
