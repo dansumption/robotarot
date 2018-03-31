@@ -12,14 +12,17 @@ const intros = [
   "looks you up and down and says"
 ];
 
-const getFortune = card => randomItem(card.fortune_telling);
+const getFortune = card =>
+  randomItem(card.fortune_telling).replace(/^(\w)/, letter =>
+    letter.toLowerCase()
+  );
 const getLight = card =>
-  `You can look forward to ${randomItem(card.meanings.light).replace(
+  `you can look forward to ${randomItem(card.meanings.light).replace(
     /^(\w)/,
     letter => letter.toLowerCase()
   )}`;
 const getShadow = card =>
-  `Beware of ${randomItem(card.meanings.shadow).replace(/^(\w)/, letter =>
+  `beware of ${randomItem(card.meanings.shadow).replace(/^(\w)/, letter =>
     letter.toLowerCase()
   )}`;
 const cardCase = name =>
